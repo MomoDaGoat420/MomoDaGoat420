@@ -1,0 +1,39 @@
+// List of Quranic verses
+const verses = [
+    {
+        text: "Indeed, with hardship [will be] ease.",
+        reference: "Surah Ash-Sharh 94:6"
+    },
+    {
+        text: "And We have certainly created man and We know what his soul whispers to him, and We are closer to him than [his] jugular vein.",
+        reference: "Surah Qaf 50:16"
+    },
+    {
+        text: "So verily, with the hardship, there is relief,",
+        reference: "Surah Ash-Sharh 94:5"
+    },
+    {
+        text: "Indeed, my Lord is the Hearer of supplication.",
+        reference: "Surah Ibrahim 14:39"
+    },
+    {
+        text: "And indeed, I am indeed forgiving to whoever repents and believes and does righteousness and then continues in guidance.",
+        reference: "Surah Taha 20:82"
+    }
+    // Add more verses as needed
+];
+
+// Function to select a random verse
+function getRandomVerse() {
+    return verses[Math.floor(Math.random() * verses.length)];
+}
+
+// Function to display a random verse
+function displayRandomVerse() {
+    const randomVerse = getRandomVerse();
+    document.getElementById("quote-text").textContent = `"${randomVerse.text}"`;
+    document.getElementById("quote-reference").textContent = `- ${randomVerse.reference}`;
+}
+
+// Call the function to display a random verse when the page loads
+window.onload = displayRandomVerse;
